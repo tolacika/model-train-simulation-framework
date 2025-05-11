@@ -1,115 +1,81 @@
-# Model Train Simulation Framework
 
-A modular, TypeScript-based simulation framework for modeling the **control logic and movement of multiple trains** across a digital/analog hybrid **model railway layout**. Built for the **browser**, with a Redux-based architecture, XState state machines, and HTML5 Canvas rendering.
+# 🚂 Model Train Simulation
 
----
+A modular, browser-based simulation framework for modeling train movement and control logic on a model LGB train set. This project is optimized for visual presentation (e.g., stage projection) and control prototyping. It emphasizes flexibility, extendability, and conceptual fidelity rather than realism.
 
-## ✨ Features
+## 🌟 Features
 
-* 🧠 **State Machines** for train and controller logic (via XState)
-* ⚙️ **Redux Toolkit** for scalable, normalized state management
-* 🎮 Simulated **user controls** for start/stop/reroute
-* 🚦 Signal and relay simulation with section controllers
-* 🖼️ Efficient **Canvas-based rendering** loop
-* 📦 Designed as a reusable **npm package**
+- **Graph-based Layouts**: Define track layouts as graphs of track blocks (sections) with static connections.
+- **Train Simulation**: Simulate train movement with time-delayed transitions between sections.
+- **Modular Controllers**: Manage sections with FSM-based controllers for occupancy tracking, signal state changes, and more.
+- **Signal System**: Visualize section states with simple red/green/off indicators.
+- **Canvas Rendering**: Render layouts and train states using HTML5 Canvas.
+- **Extensibility**: Modular architecture for easy customization and future hardware integration.
 
----
+## 📂 Documentation
 
-## 📦 Installation
+Detailed documentation is available in the `docs` folder:
 
-Install via npm:
+- [Core Concepts](docs/readme.md#-core-concepts): Learn about layouts, trains, section controllers, and signals.
+- [Track System](docs/tracks.md): Explore the LGB G-scale track system, including dimensions, types, and layout geometries.
 
-```bash
-npm install model-train-sim
-```
+## 🛠️ Installation
 
-Or use locally in a monorepo (see [Local Development](#local-development)).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/model-train-sim.git
+   cd model-train-sim
+   ```
 
----
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## 🔧 Usage Example
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-```ts
-import { createSimulation } from 'model-train-sim';
-import layoutJson from './layout.json';
+4. Open your browser and navigate to `http://localhost:3000`.
 
-const sim = createSimulation({ layout: layoutJson });
-sim.start();
+## 🚀 Usage
 
-// Dispatch control events
-sim.dispatch({ type: 'TRAIN_START', trainId: 'A' });
-```
+1. Define your layout in the [`src/layout.ts`](src/layout.ts) file.
+2. Start the simulation by running the development server.
+3. Interact with the simulation through the browser interface.
 
----
+## 📄 Project Structure
 
-## 📁 Package Structure
+- **`src/`**: Contains the main source code.
+  - [`index.ts`](src/index.ts): Entry point for the application.
+  - [`layout.ts`](src/layout.ts): Placeholder for layout configuration.
+- **`docs/`**: Documentation files.
+  - [`readme.md`](docs/readme.md): Overview of core concepts.
+  - [`tracks.md`](docs/tracks.md): Details about the LGB track system.
+- **`dist/`**: Output directory for the built project (generated after running `npm run build`).
 
-```
-src/
-├── core/               # Simulation logic & state machines
-├── state/              # Redux slices & store
-├── render/             # Canvas drawing utils
-├── ui/                 # Native controls (optional)
-└── index.ts            # Entry point
-```
+## 🔧 Configuration
 
----
+- **TypeScript**: Configured via [`tsconfig.json`](tsconfig.json).
+- **Vite**: Development server and build tool configured via [`vite.config.ts`](vite.config.ts).
 
-## 🛠️ Local Development
+## 🧩 Extensibility
 
-Use in a monorepo:
+This project is designed to be modular and scalable. You can extend it by:
 
-```bash
-my-sim-project/
-├── packages/
-│   └── model-train-sim/       # This framework
-├── apps/
-│   └── example-sim-ui/        # Your simulation UI
-└── package.json               # With workspaces
-```
+- Adding new FSM-based controllers for sections or trains.
+- Integrating Web Serial/WebSocket for hardware testing.
+- Customizing the rendering logic in the simulation engine.
 
-In the root `package.json`:
+## 📜 License
 
-```json
-{
-  "workspaces": ["packages/*", "apps/*"]
-}
-```
+This project is licensed under the [MIT License](LICENSE).
 
-Link and develop locally:
+## 🙌 Contributing
 
-```bash
-cd packages/model-train-sim
-npm run build --watch
-```
+Contributions are welcome! Feel free to open issues or submit pull requests to improve the project.
 
----
+## 📦 Summary
 
-## 🚂 Concepts
-
-* **Trains**: Move between fixed sections with delayed transitions
-* **Sections**: Track blocks (nodes in graph), may be occupied
-* **Controllers**: Simulated logic blocks that respond to sensors
-* **Signals**: Visual state feedback (stop/go/etc)
-
----
-
-## 🔮 Future Integration
-
-The architecture supports future plug-ins for:
-
-* 🛠️ Hardware control (e.g., Arduino or logic gates)
-* 🧲 Real sensors and relays
-* 📡 Remote control panels
-
----
-
-## 📄 License
-
-MIT License. Created by \Laszlo Toth <Tolacika>.
-
----
-
-## 📬 Contributions
-
-Feel free to open issues, pull requests, or suggestions for expansion.
+This framework serves as a control logic and visualization platform for model railways, using browser-native technologies. It is conceptually simple, modular, hardware-agnostic, and geared toward presentation and prototyping.

@@ -15,6 +15,7 @@ Develop a modular, browser-based simulation framework for modeling train movemen
 * Defined as a graph of track blocks (sections) with static connections.
 * JSON-based layout definition.
 * Each section includes coordinates for rendering, connection IDs, signal state, and occupancy.
+* [Read more...](/docs/tracks.md)
 
 #### 🚆 Trains
 
