@@ -15,6 +15,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
+    "@tailwindcss/vite": "^4.1.6",
+    "tailwindcss": "^4.1.6",
     "xstate": "^5.0.0"
   },
   "devDependencies": {

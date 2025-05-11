@@ -58,7 +58,7 @@ Detailed documentation is available in the `docs` folder:
 ## 🔧 Configuration
 
 - **TypeScript**: Configured via [`tsconfig.json`](tsconfig.json).
-- **Vite**: Development server and build tool configured via [`vite.config.ts`](vite.config.ts).
+- **Vite**: Development server and build tool configured via [`vite.config.mjs`](vite.config.mjs).
 
 ## 🧩 Extensibility
 
