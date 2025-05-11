@@ -46,8 +46,6 @@ This document provides an overview of the LGB G-scale track system components, i
 | 12050       | Electronic switch  | Right       | 300    | R1, 30°   | Standard switch, 30° angle      |
 | 12100       | Manual switch      | Left        | 300    | R1, 30°   | Standard switch, 30° angle      |
 | 12150       | Electronic switch  | Left        | 300    | R1, 30°   | Standard switch, 30° angle      |
-| 12260       | double slip switch | N/A         | 375    | R2, 22.5° | Double slip switch, 22.5° angle |
-| 12360       | 3-way switch       | N/A         | 375    | 2xR1, 30° | 3-way switch, 30° angle         |
 | 16040       | Manual switch      | Right       | 440    | R3, 22.5° | Standard switch, 22.5° angle    |
 | 16050       | Electronic switch  | Right       | 440    | R3, 22.5° | Standard switch, 22.5° angle    |
 | 16140       | Manual switch      | Left        | 440    | R3, 22.5° | Standard switch, 22.5° angle    |
@@ -60,12 +58,12 @@ This document provides an overview of the LGB G-scale track system components, i
 
 ## Crossings and Special Tracks
 
-| Part Number | Lengths (mm)              | Crossing Angle | Additional Notes |
-| ----------- | ------------------------- | -------------- | ---------------- |
-| 13000       | 300, 341                  | 30°            |                  |
-| 13100       | 150, 185                  | 90°            |                  |
-| 13200       | 375                       | 22.5°          |                  |
-| 12260       | Straight: 375, Branch: R2 | 22.5°          |                  |
+| Part Number | Lengths (mm)              | Crossing Angle | Additional Notes                |
+| ----------- | ------------------------- | -------------- | ------------------------------- |
+| 13000       | 300, 341                  | 30°            |                                 |
+| 13100       | 150, 185                  | 90°            |                                 |
+| 13200       | 375                       | 22.5°          |                                 |
+| 12260       | Straight: 375, Branch: R2 | 22.5°          | Double slip switch, 22.5° angle |
 
 ---
 

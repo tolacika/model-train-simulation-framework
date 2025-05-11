@@ -28,3 +28,15 @@ export interface TrackComponent {
     orientation?: string; // e.g., "Right", "Left"
     crossingAngle?: string; // e.g., "22.5°"
 }
+
+export interface TrackConnection {
+    
+}
+
+export interface TrackSection {
+    id: string;
+    components: TrackComponent[];
+    connections: TrackConnection[];
+
+
+}
